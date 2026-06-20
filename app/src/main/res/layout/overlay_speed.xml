@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/overlay_background"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <!-- Title bar with close button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🚗 Speed"
+            android:textColor="#AAAAAA"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnOverlayClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:tint="#666666"
+            android:padding="2dp" />
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1AFFFFFF"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Big speed number -->
+    <TextView
+        android:id="@+id/tvOverlaySpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#00E676"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="-0.02" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="km/h"
+        android:textColor="#777777"
+        android:textSize="11sp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1AFFFFFF"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Limit display -->
+    <TextView
+        android:id="@+id/tvOverlayLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Límite: 80 km/h"
+        android:textColor="#FF8C00"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/tvOverlayStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS buscando..."
+        android:textColor="#AAAAAA"
+        android:textSize="9sp"
+        android:gravity="center" />
+
+</LinearLayout>
